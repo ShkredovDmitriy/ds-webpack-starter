@@ -33,9 +33,8 @@ Favicons generation
 
 # Directories
 
-There are four main directories in project. This directories like below:
-
 ```
+build/             #  project build files
 dev/
   |_ app/          # javascript files           (js)
   |_ assets/       # images, video, documents   (jpg, png, svg, mp4, pdf)
@@ -46,7 +45,8 @@ dev/
   |_ fonts         # fonts files                (woff, woff2)
   |_ pages         # site pages                 (pug)
   |_ templates     # templates for pages        (pug)
-webpack            # webpack config files
+webpack/           # webpack config files
+
 ```
 
 # License
