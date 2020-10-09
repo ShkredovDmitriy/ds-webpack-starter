@@ -1,0 +1,32 @@
+// netbook
+@mixin media-netbook {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+// tablet
+@mixin media-tablet {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+// mobile
+@mixin media-mobile {
+  @media (max-width: 570px) {
+    @content;
+  }
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+
+    src: url("#{$file-path}.woff2") format("woff2"),
+      url("#{$file-path}.woff") format("woff");
+  }
+}

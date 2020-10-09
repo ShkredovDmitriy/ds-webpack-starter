@@ -1,0 +1,28 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: $color-blue;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.main-header__wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 30px;
+}
+
+.main-header__link {
+  margin-left: auto;
+  display: block;
+
+  svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+}
