@@ -22,9 +22,13 @@ npm run build
 # Features
 
 Pug
+
 Scss
+
 ES6
+
 Development server
+
 Favicons generation
 
 # Directories
