@@ -2,6 +2,8 @@
 
 A universal foundation for your next webpack based frontend project.
 
+## Usage
+
 #### Clone the repository
 ```
 git clone https://github.com/ShkredovDmitriy/ds-webpack-starter.git PROJECT-NAME
@@ -21,6 +23,7 @@ npm run start
 ```
 npm run build
 ```
+
 ## Features
 
 * Pug
