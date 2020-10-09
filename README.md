@@ -19,3 +19,32 @@ npm run start
 ```
 npm run build
 ```
+# Features
+
+Pug
+Scss
+ES6
+Development server
+Favicons generation
+
+# Directories
+
+There are four main directories in project. This directories like below:
+
+```
+dev/
+  |_ app/          # javascript files           (js)
+  |_ assets/       # images, video, documents   (jpg, png, svg, mp4, pdf)
+  |_ blocks/       # large chunks of code       (pug + scss)
+  |_ components/   # small pieces of code       (pug + scss)
+  |_ elements/     # a, span, button, etc       (pug + scss)
+  |_ common        # scss vars, mixins, reset   (scss)
+  |_ fonts         # fonts files                (woff, woff2)
+  |_ pages         # site pages                 (pug)
+  |_ templates     # templates for pages        (pug)
+webpack            # webpack config files
+```
+
+# License
+
+This project is under the MIT license.
