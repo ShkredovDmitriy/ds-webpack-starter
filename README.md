@@ -2,36 +2,35 @@
 
 A universal foundation for your next webpack based frontend project.
 
-### Installation
+#### Clone the repository
+```
+git clone https://github.com/ShkredovDmitriy/ds-webpack-starter.git PROJECT-NAME
+```
 
+#### Installation
 ```
 npm install
 ```
 
-### Start Dev Server
-
+#### Start Dev Server
 ```
 npm run start
 ```
 
-### Build Prod Version
-
+#### Build Prod Version
 ```
 npm run build
 ```
-# Features
+## Features
 
-Pug
+* Pug
+* Scss
+* ES6
+* Development server
+* Reboot on save changes
+* Favicons generation
 
-Scss
-
-ES6
-
-Development server
-
-Favicons generation
-
-# Directories
+## Directories
 
 ```
 build/             #  project build files
@@ -49,6 +48,6 @@ webpack/           # webpack config files
 
 ```
 
-# License
+## License
 
 This project is under the MIT license.
