@@ -10,7 +10,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 const fs = require('fs');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
@@ -88,9 +87,6 @@ const commonProd = merge([
     output: {
       path: PATHS.build,
       filename: './js/[name].js?[hash]',
-    },
-    optimization: {
-      minimizer: [new OptimizeCssAssetsPlugin()],
     },
     plugins: [
       new webpack.ProvidePlugin({
