@@ -36,18 +36,22 @@ npm run build
 ## Directories
 
 ```
-build/             #  project build files
+build/               #  project build files
 dev/
-  |_ app/          # javascript files           (js)
-  |_ assets/       # images, video, documents   (jpg, png, svg, mp4, pdf)
-  |_ blocks/       # large chunks of code       (pug + scss)
-  |_ components/   # small pieces of code       (pug + scss)
-  |_ elements/     # a, span, button, etc       (pug + scss)
-  |_ common        # scss vars, mixins, reset   (scss)
-  |_ fonts         # fonts files                (woff, woff2)
-  |_ pages         # site pages                 (pug)
-  |_ templates     # templates for pages        (pug)
-webpack/           # webpack config files
+  |_ app/            # javascript files            (js)
+  |_ assets/         
+    |_ documents/    # rules                       (pdf)
+    |_ images/       # images, video               (jpg, png, svg, mp4)
+    |_ sprites/      # sprite                      (svg)
+  |_ blocks/         # large chunks of code        (pug + scss)
+  |_ components/     # small pieces of code        (pug + scss)
+  |_ elements/       # a, span, button, etc        (pug + scss)
+  |_ common          # scss vars, mixins, reset    (scss)
+  |_ fonts           # fonts files                 (woff, woff2)
+  |_ pages           # site pages                  (pug)
+  |_ templates       # templates for pages         (pug)
+  favicon.png        # image for favicon plagin    (png)
+webpack/             # webpack config files
 
 ```
 
