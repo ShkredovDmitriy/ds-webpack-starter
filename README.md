@@ -51,7 +51,7 @@ dev/
   |_ pages           # site pages                  (pug)
   |_ templates       # templates for pages         (pug)
   favicon.png        # image for favicon plagin    (png)
-webpack/             # webpack config files
+config/              # webpack config files
 
 ```
 
