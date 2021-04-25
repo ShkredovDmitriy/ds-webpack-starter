@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "js:lint": "eslint --debug dev/",
     "js:lintfix": "eslint --debug dev/ --fix",
-    "css:lint": "stylelint \"dev/**/*.scss\" --config stylelint.config.js --fix"
+    "css:lint": "stylelint \"dev/**/*.scss\" --config stylelint.config.js --fix",
+    "deploy": "node ./config/deploy"
   },
   "keywords": [],
   "author": "shkredovdmitriy@gmail.com",
