@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable func-names */
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = function() {
