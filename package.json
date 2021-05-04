@@ -11,7 +11,7 @@
     "js:lint": "eslint --debug dev/",
     "js:lintfix": "eslint --debug dev/ --fix",
     "css:lint": "stylelint \"dev/**/*.scss\" --config stylelint.config.js --fix",
-    "deploy": "node ./config/deploy"
+    "deploy": "node deploy"
   },
   "keywords": [],
   "author": "shkredovdmitriy@gmail.com",
@@ -25,7 +25,6 @@
     "@babel/preset-env": "^7.0.0",
     "@webcomponents/webcomponentsjs": "^2.2.10",
     "babel-loader": "^8.0.2",
-    "clean-webpack-plugin": "*",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^1.0.0",
     "eslint": "^5.3.0",
@@ -52,6 +51,7 @@
     "prettier-eslint": "^8.8.2",
     "prettier-eslint-cli": "^4.7.1",
     "prettier-stylelint": "^0.4.2",
+    "promise-ftp-common": "^1.1.5",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "resolve-url-loader": "2.3.1",
@@ -79,6 +79,7 @@
     "es6-promise": "^4.2.6",
     "es6-promise-promise": "^1.0.0",
     "fast-async": "^6.3.8",
+    "ftp-deploy": "^2.4.1",
     "imask": "^5.1.5",
     "navigo": "^7.1.2",
     "normalize.css": "^8.0.0",

@@ -1,6 +1,5 @@
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -15,8 +14,8 @@ const sass = require("./config/sass");
 const extractCSS = require("./config/css.extract");
 const css = require("./config/css");
 const sourceMap = require("./config/sourceMap");
-const lintJS = require("./config/js.lint");
-const lintCSS = require("./config/sass.lint");
+// const lintJS = require("./config/js.lint");
+// const lintCSS = require("./config/sass.lint");
 const images = require("./config/images");
 const filesLocations = require("./config/filesLocations");
 const fonts = require("./config/fonts");
