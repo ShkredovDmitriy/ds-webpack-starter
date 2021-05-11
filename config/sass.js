@@ -1,3 +1,5 @@
+const autoprefixer = require("autoprefixer");
+
 module.exports = function(paths) {
   return {
     module: {
@@ -6,19 +8,28 @@ module.exports = function(paths) {
           test: /\.scss$/,
           include: paths,
           use: [
-            'style-loader',
-            'css-loader',
-            'resolve-url-loader',
+            "style-loader",
+            "css-loader",
             {
-              loader: 'sass-loader',
+              loader: "postcss-loader",
+              options: {
+                plugins: [autoprefixer()],
+                sourceMap: true
+              }
+            },
+            {
+              loader: "resolve-url-loader"
+            },
+            {
+              loader: "sass-loader",
               options: {
                 sourceMap: true,
-                sourceMapContents: false,
-              },
-            },
-          ],
-        },
-      ],
-    },
+                sourceMapContents: false
+              }
+            }
+          ]
+        }
+      ]
+    }
   };
 };
