@@ -4,6 +4,7 @@
       "stylelint-order"
     ],
   "rules": {
+      "number-leading-zero": "always",
       "order/order": [
           {
               "type": "at-rule",

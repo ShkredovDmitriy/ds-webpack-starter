@@ -1,0 +1,17 @@
+{
+  "editor.tabSize": 2,
+  "scss.validate": false,
+  "css.validate": false,
+  "less.validate": false,
+   "editor.codeActionsOnSave": {
+     "source.fixAll.stylelint": true,
+     "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+}

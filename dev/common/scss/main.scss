@@ -6,9 +6,11 @@
 
 @import "./reset.scss";
 
-// blocks
-@import "../../blocks/main-header/main-header.scss";
+// ELEMENTS
+@import "../../elements/elements.scss";
 
-@import "../../blocks/main-content/main-content.scss";
+// COMPONENTS
+@import "../../components/components.scss";
 
-@import "../../blocks/main-footer/main-footer.scss";
+// BLOCKS
+@import "../../blocks/blocks.scss";
