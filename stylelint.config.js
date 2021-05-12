@@ -1,9 +1,9 @@
-// Stylelint config rules
 module.exports = {
   extends: ["stylelint-config-airbnb"],
   plugins: ["stylelint-order"],
   rules: {
     "number-leading-zero": "always",
+    "rule-empty-line-before": ["always", { ignore: ["first-nested"] }],
     "order/order": [
       {
         type: "at-rule",
