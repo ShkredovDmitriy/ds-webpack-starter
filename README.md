@@ -5,33 +5,37 @@ A universal foundation for your next webpack based frontend project.
 ## Usage
 
 #### Clone the repository
+
 ```
 git clone https://github.com/ShkredovDmitriy/ds-webpack-starter.git PROJECT-NAME
 ```
 
 #### Installation
+
 ```
 npm install
 ```
 
 #### Start Dev Server
+
 ```
 npm run start
 ```
 
 #### Build Prod Version
+
 ```
 npm run build
 ```
 
 ## Features
 
-* Pug
-* Scss
-* ES6
-* Development server
-* Reboot on save changes
-* Favicons generation
+- Pug
+- Scss
+- ES6
+- Development server
+- Reboot on save changes
+- Favicons generation
 
 ## Directories
 
@@ -39,8 +43,9 @@ npm run build
 build/               #  project build files
 dev/
   |_ app/            # javascript files            (js)
-  |_ assets/         
+  |_ assets/
     |_ documents/    # rules                       (pdf)
+    |_ favicon/      # favicon                     (png)
     |_ images/       # images, video               (jpg, png, svg, mp4)
     |_ sprites/      # sprite                      (svg)
   |_ blocks/         # large chunks of code        (pug + scss)
