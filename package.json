@@ -11,7 +11,8 @@
     "js:lint": "eslint --debug dev/",
     "js:lintfix": "eslint --debug dev/ --fix",
     "css:lint": "stylelint \"dev/**/*.scss\" --config stylelint.config.js --fix",
-    "deploy": "node deploy"
+    "deploy": "node deploy",
+    "api": "node server"
   },
   "keywords": [],
   "author": "shkredovdmitriy@gmail.com",
@@ -76,9 +77,12 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/runtime": "^7.4.4",
     "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv-webpack": "^1.7.0",
     "es6-promise": "^4.2.6",
     "es6-promise-promise": "^1.0.0",
+    "express": "^4.17.1",
     "fast-async": "^6.3.8",
     "ftp-deploy": "^2.4.1",
     "imask": "^5.1.5",
