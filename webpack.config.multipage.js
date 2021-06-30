@@ -8,8 +8,8 @@ const CopyPlugin = require("copy-webpack-plugin");
 const merge = require("webpack-merge");
 const webpack = require("webpack");
 const fs = require("fs");
-const aliases = require("./config/aliases");
 const pug = require("./config/pug");
+const aliases = require("./config/aliases");
 const devserver = require("./config/devserver");
 const sass = require("./config/sass");
 const extractCSS = require("./config/css.extract");
@@ -47,13 +47,35 @@ function generateHtmlPlugins(templateDir) {
   });
 }
 
+function generateEntryPoints(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  const entryObject = {};
+  for (let i = 0; i < templateFiles.length; i++) {
+    const pageDirName = templateFiles[i];
+    const jsFiles = fs.readdirSync(
+      path.resolve(__dirname, templateDir + "/" + pageDirName)
+    );
+    for (let j = 0; j < jsFiles.length; j++) {
+      const parts = jsFiles[j].split(".");
+      const name = parts[0];
+      const ext = parts[1];
+      if (ext === "js" || ext === "ts") {
+        entryObject[name] = path.resolve(
+          __dirname,
+          `${templateDir}/${pageDirName}/${name}.${ext}`
+        );
+      }
+    }
+  }
+  return entryObject;
+}
+
 const htmlPages = generateHtmlPlugins("./dev/pages");
+const entriesObject = generateEntryPoints("./dev/pages");
 
 const commonDev = merge([
   {
-    entry: {
-      main: `${PATHS.source}/app/main.ts`
-    },
+    entry: entriesObject,
     output: {
       path: PATHS.build,
       filename: "./js/[name].js?[hash]"
@@ -90,9 +112,7 @@ const commonDev = merge([
 
 const commonProd = merge([
   {
-    entry: {
-      main: `${PATHS.source}/app/main.ts`
-    },
+    entry: entriesObject,
     output: {
       path: PATHS.build,
       filename: "./js/[name].js?[hash]"
@@ -125,8 +145,7 @@ const commonProd = merge([
   pug(),
   images(),
   fonts(),
-  babel(),
-  favicon()
+  babel()
 ]);
 
 module.exports = function(env, argv) {

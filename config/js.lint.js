@@ -5,11 +5,11 @@ module.exports = function({ paths, options }) {
         {
           test: /\.js$/,
           include: paths,
-          enforce: 'pre',
-          loader: 'eslint-loader',
-          options: options,
-        },
-      ],
-    },
+          enforce: "pre",
+          loader: "eslint-loader",
+          options: options
+        }
+      ]
+    }
   };
 };
