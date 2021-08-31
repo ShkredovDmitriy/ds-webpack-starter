@@ -41,6 +41,7 @@ function generateHtmlPlugins(templateDir) {
         __dirname,
         `${templateDir}/${name}/${name}.${extension}`
       ),
+      chunks: [`${name}`],
       inject: true
     });
     return html;
