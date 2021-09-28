@@ -20,6 +20,7 @@ const lintCSS = require("./config/sass.lint");
 const images = require("./config/images");
 const filesLocations = require("./config/filesLocations");
 const fonts = require("./config/fonts");
+const sprites = require("./config/svgsprite");
 const babel = require("./config/babel");
 const favicon = require("./config/favicon");
 const typescript = require("./config/typescript");
@@ -84,6 +85,7 @@ const commonDev = merge([
   },
   pug(),
   images(),
+  sprites(),
   fonts(),
   babel()
 ]);
@@ -124,6 +126,7 @@ const commonProd = merge([
   },
   pug(),
   images(),
+  sprites(),
   fonts(),
   babel(),
   favicon()

@@ -73,6 +73,8 @@
     "stylelint-order": "^2.0.0",
     "stylelint-scss": "^3.6.0",
     "stylelint-webpack-plugin": "^0.10.5",
+    "svg-sprite-loader": "^6.0.9",
+    "svgo-loader": "^3.0.0",
     "ts-jest": "^27.0.5",
     "ts-loader": "^8.2.0",
     "ts-node": "^10.2.1",
