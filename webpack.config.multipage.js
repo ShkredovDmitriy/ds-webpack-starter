@@ -9,6 +9,8 @@ const merge = require("webpack-merge");
 const webpack = require("webpack");
 const fs = require("fs");
 const pug = require("./config/pug");
+const html = require("./config/html");
+const ejs = require("./config/ejs");
 const aliases = require("./config/aliases");
 const devserver = require("./config/devserver");
 const sass = require("./config/sass");
@@ -34,7 +36,13 @@ function generateHtmlPlugins(templateDir) {
   return templateFiles.map(item => {
     const parts = item.split(".");
     const name = parts[0];
-    const extension = "pug";
+    let extension = "pug";
+    const templateFiles = fs.readdirSync(
+      path.resolve(__dirname, templateDir, item)
+    );
+    if (templateFiles.includes(name + ".html")) {
+      extension = "html";
+    }
     const html = new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: path.resolve(

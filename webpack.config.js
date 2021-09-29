@@ -10,6 +10,8 @@ const webpack = require("webpack");
 const fs = require("fs");
 const aliases = require("./config/aliases");
 const pug = require("./config/pug");
+const html = require("./config/html");
+const ejs = require("./config/ejs");
 const devserver = require("./config/devserver");
 const sass = require("./config/sass");
 const extractCSS = require("./config/css.extract");
@@ -31,11 +33,21 @@ const PATHS = {
 };
 
 function generateHtmlPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  return templateFiles.map(item => {
+  const templateFolders = fs.readdirSync(path.resolve(__dirname, templateDir));
+
+  return templateFolders.map(item => {
     const parts = item.split(".");
     const name = parts[0];
-    const extension = "pug";
+    let extension = "pug";
+    const templateFiles = fs.readdirSync(
+      path.resolve(__dirname, templateDir, item)
+    );
+    if (templateFiles.includes(name + ".html")) {
+      extension = "html";
+    } else if (templateFiles.includes(name + ".ejs")) {
+      extension = "ejs";
+    }
+
     const html = new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: path.resolve(
@@ -84,6 +96,8 @@ const commonDev = merge([
     }
   },
   pug(),
+  html(),
+  ejs(),
   images(),
   sprites(),
   fonts(),
@@ -125,6 +139,8 @@ const commonProd = merge([
     }
   },
   pug(),
+  html(),
+  ejs(),
   images(),
   sprites(),
   fonts(),
