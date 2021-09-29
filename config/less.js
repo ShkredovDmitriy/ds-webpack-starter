@@ -5,7 +5,7 @@ module.exports = function(paths) {
     module: {
       rules: [
         {
-          test: /\.(sa|sc|c)ss$/,
+          test: /\.less$/,
           include: paths,
           use: [
             "style-loader",
@@ -21,10 +21,9 @@ module.exports = function(paths) {
               loader: "resolve-url-loader"
             },
             {
-              loader: "sass-loader",
+              loader: "less-loader",
               options: {
-                sourceMap: true,
-                sourceMapContents: false
+                sourceMap: true
               }
             }
           ]

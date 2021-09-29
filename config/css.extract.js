@@ -1,4 +1,4 @@
-const ExtractTextPlugin = require('mini-css-extract-plugin');
+const ExtractTextPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer");
 
 module.exports = function(paths) {
@@ -11,10 +11,10 @@ module.exports = function(paths) {
             {
               loader: ExtractTextPlugin.loader,
               options: {
-                publicPath: '../',
-              },
+                publicPath: "../"
+              }
             },
-            'css-loader',
+            "css-loader",
             {
               loader: "postcss-loader",
               options: {
@@ -23,22 +23,50 @@ module.exports = function(paths) {
               }
             },
             {
-              loader: 'resolve-url-loader',
+              loader: "resolve-url-loader"
             },
             {
-              loader: 'sass-loader',
+              loader: "sass-loader",
               options: {
-                sourceMap: true,
-              },
-            },
-          ],
+                sourceMap: true
+              }
+            }
+          ]
         },
-      ],
+        {
+          test: /\.less$/,
+          use: [
+            {
+              loader: ExtractTextPlugin.loader,
+              options: {
+                publicPath: "../"
+              }
+            },
+            "css-loader",
+            {
+              loader: "postcss-loader",
+              options: {
+                plugins: [autoprefixer()],
+                sourceMap: true
+              }
+            },
+            {
+              loader: "resolve-url-loader"
+            },
+            {
+              loader: "less-loader",
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        }
+      ]
     },
     plugins: [
       new ExtractTextPlugin({
-        filename: './css/[name].css?[hash]',
-      }),
-    ],
+        filename: "./css/[name].css?[hash]"
+      })
+    ]
   };
 };

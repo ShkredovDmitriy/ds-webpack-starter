@@ -15,6 +15,7 @@ const html = require("./config/html");
 const ejs = require("./config/ejs");
 const devserver = require("./config/devserver");
 const sass = require("./config/sass");
+const less = require("./config/less");
 const extractCSS = require("./config/css.extract");
 const css = require("./config/css");
 const sourceMap = require("./config/sourceMap");
@@ -159,6 +160,7 @@ module.exports = function(env, argv) {
       typescript(),
       devserver(),
       sass(),
+      less(),
       css(),
       sourceMap()
     ]);
