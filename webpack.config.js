@@ -1,6 +1,7 @@
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const SvgSpriteHtmlWebpackPlugin = require("svg-sprite-html-webpack");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
