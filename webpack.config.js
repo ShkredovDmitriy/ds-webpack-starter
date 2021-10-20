@@ -26,6 +26,7 @@ const filesLocations = require("./config/filesLocations");
 const fonts = require("./config/fonts");
 const sprites = require("./config/svgsprite");
 const babel = require("./config/babel");
+const vue = require("./config/vue");
 const favicon = require("./config/favicon");
 const typescript = require("./config/typescript");
 
@@ -92,7 +93,8 @@ const commonDev = merge([
     },
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "dev/")
+        "~": path.resolve(__dirname, "dev/"),
+        vue$: "vue/dist/vue.esm.js"
       },
       extensions: [".ts", ".tsx", ".js"]
     }
@@ -103,7 +105,8 @@ const commonDev = merge([
   images(),
   sprites(),
   fonts(),
-  babel()
+  babel(),
+  vue()
 ]);
 
 const commonProd = merge([
@@ -135,7 +138,8 @@ const commonProd = merge([
     },
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "dev/")
+        "~": path.resolve(__dirname, "dev/"),
+        vue$: "vue/dist/vue.esm.js"
       },
       extensions: [".ts", ".tsx", ".js"]
     }
@@ -147,6 +151,7 @@ const commonProd = merge([
   sprites(),
   fonts(),
   babel(),
+  vue(),
   favicon()
 ]);
 
