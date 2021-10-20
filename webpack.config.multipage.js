@@ -42,6 +42,8 @@ function generateHtmlPlugins(templateDir) {
     );
     if (templateFiles.includes(name + ".html")) {
       extension = "html";
+    } else if (templateFiles.includes(name + ".ejs")) {
+      extension = "ejs";
     }
     const html = new HtmlWebpackPlugin({
       filename: `${name}.html`,
@@ -114,7 +116,10 @@ const commonDev = merge([
     }
   },
   pug(),
+  html(),
+  ejs(),
   images(),
+  sprites(),
   fonts(),
   babel()
 ]);
@@ -152,7 +157,10 @@ const commonProd = merge([
     }
   },
   pug(),
+  html(),
+  ejs(),
   images(),
+  sprites(),
   fonts(),
   babel()
 ]);
@@ -167,6 +175,7 @@ module.exports = function(env, argv) {
       typescript(),
       devserver(),
       sass(),
+      less(),
       css(),
       sourceMap()
     ]);
